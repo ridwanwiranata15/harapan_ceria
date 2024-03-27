@@ -1,0 +1,652 @@
+body {
+    cursor: context-menu;
+}
+
+.container .child {
+    background-color: #4bcffa;
+    width: 100ps;
+    height: 190px;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    float: left;
+    max-width: 500px;
+    border: 1px solid black;
+    color: black;
+}
+
+.container {
+    display: flex;
+}
+
+.container .parent {}
+
+.container .parent .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4bcffa;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container .parent .title .button button {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}
+
+.container .parent table {
+    background-color: white;
+    padding: 10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.container .parent table tr th {
+    padding-right: 40px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.container .parent h2 {
+    color: white;
+    cursor: context-menu;
+}
+
+/* imunisasi */
+.container .imunitation .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4bcffa;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container .imunitation .title .button button {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}
+
+.container .imunitation table {
+    background-color: white;
+    padding: 50px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container .imunitation table tr th {
+    padding-right: 120px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.container .imunitation h2 {
+    color: white;
+    cursor: context-menu;
+}
+/* Riwayat kesehatan anak */
+.container .history .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4bcffa;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container .history .title .button button {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}
+
+.container .history table {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.container .history table tr th {
+    padding-right: 50px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.container .history table tr td:last-child button {
+    padding: 10px;
+    border: none;
+}
+.container .history table tr td:last-child button:first-child {
+   background-color: #ffdd59;
+}
+.container .history table tr td:last-child button:last-child {
+   background-color: #ff3f34;
+   color: white;
+}
+.container .history h2 {
+    color: white;
+    cursor: context-menu;
+}
+/* Assesmen Gizi */
+.container .nutrition .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4bcffa;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container .nutrition .title .button button {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}
+
+.container .nutrition table {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container .nutrition table tr th {
+    padding-right: 50px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.container .nutrition table tr td:last-child button{
+    padding: 10px;
+    border: none;
+}
+.container .nutrition table tr td:last-child button:first-child{
+    background-color: #ffdd59;
+}
+.container .nutrition table tr td:last-child button:last-child{
+    background-color: #ff3f34;
+    color: white;
+}
+
+.container .nutrition h2 {
+    color: white;
+    cursor: context-menu;
+}
+/* Perkembangan dan pertumbuhan */
+.container .tumbuh .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4bcffa;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container .tumbuh .title .button button {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}
+
+.container .tumbuh table {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container .tumbuh table tr th {
+    padding-right: 50px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.container .tumbuh table tr td:last-child button {
+   padding: 10px;
+   border: none;
+}
+.container .tumbuh table tr td:last-child button:first-child {
+  background-color: #ffdd59;
+}
+.container .tumbuh table tr td:last-child button:last-child {
+  background-color: #ff3f34;
+  color: white;
+}
+.container .tumbuh h2 {
+    color: white;
+    cursor: context-menu;
+}
+.modal-create-parent {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal-create-parent .content {
+    background-color: white;
+    display: block;
+    margin: 10px auto;
+    width: 380px;
+    padding: 10px;
+    animation: blink 2s ease forwards;
+}
+
+.modal-create-parent .content input[type="date"],
+select,
+input[type="text"] {
+    width: 100%;
+}
+
+.modal-create-parent .content .action-create button:first-child {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-create-parent .content .action-create button:last-child {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.container .more .parent table tbody tr td:last-child button {
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.container .more .parent table tbody tr td:last-child button:first-child {
+    background-color: #ffdd59;
+}
+
+.container .more .parent table tbody tr td:last-child button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}
+
+.modal-edit-parent {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-edit-parent .content {
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 390px;
+    display: block;
+
+}
+
+.modal-edit-parent .content input[type='date'] {
+    width: 100%;
+
+}
+
+.modal-edit-parent .content .action-edit {
+    margin-top: 10px;
+}
+
+.modal-edit-parent .content .action-edit button {
+    padding: 10px;
+    border: none;
+}
+
+.modal-edit-parent .content .action-edit button:first-child {
+    background-color: #ffdd59;
+}
+
+.modal-edit-parent .content .action-edit button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}
+
+.modal-create-antibody {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-create-antibody .content {
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 390px;
+    display: block;
+}
+
+.modal-create-antibody .content input[type='date'] {
+    width: 100%;
+
+}
+
+.modal-create-antibody .content .action-create {
+    margin-top: 10px;
+}
+
+.modal-create-antibody .content .action-create button {
+    padding: 10px;
+    border: none;
+}
+
+.modal-create-antibody .content .action-create button:first-child {
+    background-color: #ffdd59;
+}
+
+.modal-create-antibody .content .action-create button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}
+
+.container .more .imunitation table tbody tr td:last-child button:first-child {
+    background-color: #ffdd59;
+}
+
+.container .more .imunitation table tbody tr td:last-child button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}
+
+.container .more .imunitation table tbody tr td:last-child button {
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.modal-edit-antibody {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-edit-antibody .content {
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 390px;
+    display: block;
+
+}
+
+.modal-edit-antibody .content input[type='date'] {
+    width: 100%;
+
+}
+
+.modal-edit-antibody .content .action-edit {
+    margin-top: 10px;
+}
+
+.modal-edit-antibody .content .action-edit button {
+    padding: 10px;
+    border: none;
+}
+
+.modal-edit-antibody .content .action-edit button:first-child {
+    background-color: #ffdd59;
+}
+
+.modal-edit-antibody .content .action-edit button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}
+.modal-create-history{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-create-history .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 330px;
+    display: block;
+}
+.modal-create-history .content input[type="date"]{
+    width: 100%;
+}
+.modal-create-history .content .action-create button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-create-history .content .action-create button:first-child{
+    background-color:lawngreen;
+}
+.modal-create-history .content .action-create button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}
+.modal-edit-history {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-edit-history .content {
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 390px;
+    display: block;
+
+}
+
+.modal-edit-history .content input[type='date'] {
+    width: 100%;
+
+}
+
+.modal-edit-history .content .action-edit {
+    margin-top: 10px;
+}
+
+.modal-edit-history .content .action-edit button {
+    padding: 10px;
+    border: none;
+}
+
+.modal-edit-history .content .action-edit button:first-child {
+    background-color: #ffdd59;
+}
+
+.modal-edit-history .content .action-edit button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}
+.modal-create-nutrition{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-create-nutrition .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 330px;
+    display: block;
+}
+.modal-create-nutrition .content input[type="date"]{
+    width: 100%;
+}
+.modal-create-nutrition .content .action-create button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-create-nutrition .content .action-create button:first-child{
+    background-color:lawngreen;
+}
+.modal-create-nutrition .content .action-create button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}
+.modal-edit-nutrition{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-edit-nutrition .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 330px;
+    display: block;
+}
+.modal-edit-nutrition .content input[type="date"]{
+    width: 100%;
+}
+.modal-edit-nutrition .content .action-edit button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-edit-nutrition .content .action-edit button:first-child{
+    background-color:#ffdd59;
+}
+.modal-edit-nutrition .content .action-edit button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}
+.modal-create-tumbuh{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-create-tumbuh .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 355px;
+    display: block;
+}
+.modal-create-tumbuh .content input[type="number"]{
+    width: 100%;
+}
+.modal-create-tumbuh .content .action-create button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-create-tumbuh .content .action-create button:first-child{
+    background-color:lawngreen;
+}
+.modal-create-tumbuh .content .action-create button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}
+.modal-edit-tumbuh{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-edit-tumbuh .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 355px;
+    display: block;
+}
+.modal-edit-tumbuh .content input[type="number"]{
+    width: 100%;
+}
+.modal-edit-tumbuh .content .action-edit button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-edit-tumbuh .content .action-edit button:first-child{
+    background-color:#ffdd59;
+}
+.modal-edit-tumbuh .content .action-edit button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}

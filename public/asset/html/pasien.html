@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/pasien.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="icon" href="../img/logo.png">
+    <title>Data Pasien</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+    </nav>
+    <div class="menu-user">
+        <div class="title-data">
+            <img src="../img/logo.png" alt="">
+            <p>Ridwan Wiranata</p>
+        </div>
+        <ul>
+            <li>
+                <span>Logout</span>
+            </li>
+            <li>
+                <span>Profile</span>
+            </li>
+            <li>
+                <span>Data data</span>
+                <span> > </span>
+            </li>
+            <ul>
+                <li>Dokter</li>
+                <li>Pasien</li>
+                <li>Jadwal Pertemuan</li>
+                <li>Poliklinik</li>
+                <li>Pendaftaran</li>
+                <li>Rekam Medis</li>
+                <li>Obat</li>
+            </ul>
+        </ul>
+    </div>
+    <button id="create">Tambah Pasien</button>
+    <div class="d-flex">
+        <div class="dewasa">
+            <input type="radio" name="payment" id="cash">
+            <label for="cash" class="cash">Dewasa</label>
+        </div>
+        <div class="anak">
+            <input type="radio" name="payment" id="credit">
+            <label for="credit" class="credit">Anak Anak</label>
+        </div>
+    </div>
+    <div class="modal-edit-adult">
+        <div class="modal-edit-adult-content">
+            <h1>Ubah Pasien</h1>
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">Laki laki</option>
+                                <option value="">Perempuan</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal lahir</td>
+                        <td>:</td>
+                        <td><input type="date" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon</td>
+                        <td>:</td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Golongan Darah</td>
+                        <td>:</td>
+                        <td>
+                        <select name="" id="">
+                            <option value="">A</option>
+                            <option value="">B</option>
+                            <option value="">AB</option>
+                            <option value="">O</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>:</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">Menikah</option>
+                                <option value="">Belum Menikah</option>
+                                <option value="">Balita / Anak</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Agama</td>
+                        <td>:</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">Islam</option>
+                                <option value="">Kristen</option>
+                                <option value="">Katolik</option>
+                                <option value="">Buddha</option>
+                                <option value="">Hindu</option>
+                                <option value="">kong hu chu</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pekerjaan</td>
+                        <td>:</td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Asuransi</td>
+                        <td>:</td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Asuransi</td>
+                        <td>:</td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr>
+                </table>
+            </form>
+            <div class="action-edit">
+                <button>Ubah</button>
+                <button>Batal</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-adult">
+        <h1>Dewasa</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal lahir</th>
+                    <th>Alamat</th>
+                    <th>Nomor Telepon</th>
+                    <th>Golongan Darah</th>
+                    <th>Status Pernikahan</th>
+                    <th>Agama</th>
+                    <th>Pekerjaan</th>
+                    <th>Nama Asuransi</th>
+                    <th>Nomor Asuransi</th>
+                    <th>Aksi</th>
+                </tr>
+            <tbody>
+                <tr data-id="1">
+                    <td>1.</td>
+                    <td>Ridwan Wiranata</td>
+                    <td>Laki laki</td>
+                    <td>15 Desember 2005</td>
+                    <td>Kp. Tamansari Rt 06 Rw 05 Desa Karya sari Kecamatan Leuwiliang kabupaten</td>
+                    <td>085777750854</td>
+                    <td>-</td>
+                    <td>Belum menikan</td>
+                    <td>Islam</td>
+                    <td>Siswa</td>
+                    <td>KIS </td>
+                    <td>121907890</td>
+                    <td>
+                        <button onclick="OpenEditAdult(1)"><i class="fa-solid fa-user-pen"></i></button>
+                        <button> <i class="fa-solid fa-user-xmark"></i></button>
+                        <button onclick="Detail(1)"> <i class="fa-solid fa-circle-info fa-lg"></i></button>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>2.</td>
+                    <td>Ratna Sari Ningsih</td>
+                    <td>Perempuan</td>
+                    <td>02 September 1983</td>
+                    <td>Kp. Tamansari Rt 06 Rw 05 Desa Karya sari Kecamatan Leuwiliang kabupaten</td>
+                    <td>085777750854</td>
+                    <td>-</td>
+                    <td>menikan</td>
+                    <td>Islam</td>
+                    <td>IRT</td>
+                    <td>BPJS</td>
+                    <td>121907890</td>
+                    <td>
+                        <button onclick="OpenEditAdult(2)">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-user-xmark"></i>
+                        </button>
+                        <button onclick="Detail(2)"> <i class="fa-solid fa-circle-info fa-lg"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+    </div>
+
+    <div class="container-adult-create">
+        <div class="container-adult-create-content">
+            <h1>Tambah Pasien</h1>
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Laki laki</option>
+                            <option value="">Perempuan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal lahir</td>
+                    <td>:</td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Nomor Telepon</td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Golongan Darah</td>
+                    <td>:</td>
+                    <td>
+                    <select name="" id="">
+                        <option value="">A</option>
+                        <option value="">B</option>
+                        <option value="">AB</option>
+                        <option value="">O</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Menikah</option>
+                            <option value="">Belum Menikah</option>
+                            <option value="">Balita / Anak</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Agama</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Islam</option>
+                            <option value="">Kristen</option>
+                            <option value="">Katolik</option>
+                            <option value="">Buddha</option>
+                            <option value="">Hindu</option>
+                            <option value="">kong hu chu</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pekerjaan</td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Nama Asuransi</td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Nomor Asuransi</td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+            </table>
+            <div class="action-create">
+                <button>Tambah</button>
+                <button>Batal</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-child">
+        <h1>Anak anak</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal lahir</th>
+                    <th>Alamat</th>
+                    <th>Nomor Telepon</th>
+                    <th>Golongan Darah</th>
+                    <th>Status</th>
+                    <th>Agama</th>
+                    <th>Pekerjaan</th>
+                    <th>Nama Asuransi</th>
+                    <th>Nomor Asuransi</th>
+                    <th>Aksi</th>
+                </tr>
+            <tbody>
+                <tr data-id="1">
+                    <td>1.</td>
+                    <td>Ridwan Wiranata</td>
+                    <td>Laki laki</td>
+                    <td>15 Desember 2005</td>
+                    <td>Kp. Tamansari Rt 06 Rw 05 Desa Karya sari Kecamatan Leuwiliang kabupaten</td>
+                    <td>085777750854</td>
+                    <td>-</td>
+                    <td>Belum menikan</td>
+                    <td>Islam</td>
+                    <td>Siswa</td>
+                    <td>KIS </td>
+                    <td>121907890</td>
+                    <td>
+                        <button onclick="EditChild(1)">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-user-xmark"></i>
+                        </button>
+                        <button onclick="DetailChild(1)">
+                            <i class="fa-solid fa-circle-info fa-lg"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Ratna Sari Ningsih</td>
+                    <td>Perempuan</td>
+                    <td>02 September 1983</td>
+                    <td>Kp. Tamansari Rt 06 Rw 05 Desa Karya sari Kecamatan Leuwiliang kabupaten</td>
+                    <td>085777750854</td>
+                    <td>-</td>
+                    <td>menikan</td>
+                    <td>Islam</td>
+                    <td>IRT</td>
+                    <td>BPJS</td>
+                    <td>121907890</td>
+                    <td>
+                        <button onclick="EditChild(2)">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-user-xmark"></i>
+                        </button>
+                        <button onclick="DetailChild(2)"> <i class="fa-solid fa-circle-info fa-lg"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+    </div>
+
+    <!--Modal Detail Pasien-->
+    <div class="modal-detail-patien">
+        <div class="modal-detail-patien-content">
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tanggal lahir</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nomor Telepon</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Golongan Darah</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Agama</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pekerjaan</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Asuransi</td>
+                    <td>:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nomor Asuransi</td>
+                    <td>:</td>
+                    <td>121907890</td>
+                </tr>
+            </table>
+            <button>Keluar</button>
+        </div>
+    </div>
+    <!-- modal edit child -->
+    <div class="modal-edit-child">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Laki laki</option>
+                            <option value="">Perempuan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal lahir</td>
+                    <td>:</td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Alamat </td>
+                    <td>:</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Golongan Darah</td>
+                    <td>:</td>
+                    <td>
+                    <select name="" id="">
+                        <option value="">A</option>
+                        <option value="">B</option>
+                        <option value="">AB</option>
+                        <option value="">O</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Agama</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Islam</option>
+                            <option value="">Kristen</option>
+                            <option value="">Katolik</option>
+                            <option value="">Buddha</option>
+                            <option value="">Hindu</option>
+                            <option value="">kong hu chu</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="action-edit">
+                <button>Ubah</button>
+                <button>Batal</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="../js/pasien.js"></script>
+    <script src="../js/all.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+.content table thead tr th{
+    padding-right: 62px;
+}
+.content table tbody tr td:nth-child(9) button{
+    padding: 10px;
+    border: none;
+}
+.content table tbody tr td:nth-child(9) button:first-child{
+    background-color: #ffdd59;
+}
+.content table tbody tr td:nth-child(9) button:last-child{
+    background-color:  #ff3f34;
+    color: white;
+}
+.modal-create-daftar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-create-daftar .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 350px;
+    display: block;
+}
+.modal-create-daftar .content input[type="date"], input[type="text"], select, input[type="time"]{
+    width: 100%;
+}
+.modal-create-daftar .content .action-create button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-create-daftar .content .action-create button:first-child{
+    background-color:lawngreen;
+}
+.modal-create-daftar .content .action-create button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}
+.modal-edit-daftar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-edit-daftar .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 350px;
+    display: block;
+}
+.modal-edit-daftar .content input[type="date"], input[type="text"], select, input[type="time"]{
+    width: 100%;
+}
+.modal-edit-daftar .content .action-edit button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-edit-daftar .content .action-edit button:first-child{
+    background-color: #ffdd59;
+}
+.modal-edit-daftar .content .action-edit button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}
+#create{
+    padding: 10px;
+    background-color: lightgreen;
+    border: none;
+    margin: 10px 0;
+}

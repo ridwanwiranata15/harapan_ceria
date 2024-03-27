@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/polikliniik.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="icon" href="../img/logo.png" >
+    <title>Jadwal Pertemuan dokter dan pasien</title>
+</head>
+<body>
+    <nav>
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+    </nav>
+    <div class="menu-user">
+        <div class="title-data">
+            <img src="../img/logo.png" alt="">
+            <p>Ridwan Wiranata</p>
+        </div>
+        <ul>
+            <li>
+                <span>Logout</span>
+            </li>
+            <li>
+                <span>Profile</span>
+            </li>
+            <li>
+                <span>Data data</span>
+                <span> > </span>
+            </li>
+            <ul>
+                <li>Dokter</li>
+                <li>Pasien</li>
+                <li>Jadwal Pertemuan</li>
+                <li>Poliklinik</li>
+                <li>Pendaftaran</li>
+                <li>Rekam Medis</li>
+                <li>Obat</li>
+            </ul>
+        </ul>
+    </div>
+    <button id="create">Tambah</button>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Lantai</th>
+                    <th>Ruangan</th>
+                    <th>Jam buka</th>
+                    <th>Jam tutup</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="1">
+                    <td>No</td>
+                    <td>Anak</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>12.00</td>
+                    <td>18.00</td>
+                    <td>
+                        <button onclick="Edit(1)"> <i class="fa-solid fa-user-pen"></i></button>
+                        <button><i class="fa-solid fa-user-xmark"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-create-poli">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Nama Poliklinik</td>
+                    <td>:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Lantai</td>
+                    <td>:</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Ruangan</td>
+                    <td>:</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Jam buka</td>
+                    <td>:</td>
+                    <td><input type="time"></td>
+                </tr>
+                <tr>
+                    <td>Jam tutup</td>
+                    <td>:</td>
+                    <td><input type="time"></td>
+                </tr>
+            </table>
+            <div class="action-create">
+                <button>Tambah</button>
+                <button>Batal</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-edit-poli">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Nama Poliklinik</td>
+                    <td>:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Lantai</td>
+                    <td>:</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Ruangan</td>
+                    <td>:</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Jam buka</td>
+                    <td>:</td>
+                    <td><input type="time"></td>
+                </tr>
+                <tr>
+                    <td>Jam tutup</td>
+                    <td>:</td>
+                    <td><input type="time"></td>
+                </tr>
+            </table>
+            <div class="action-edit">
+                <button>Ubah</button>
+                <button>Batal</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="../js/poliklinnik.js"></script>
+    <script src="../js/all.min.js"></script>
+</body>
+</html>

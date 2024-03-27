@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/jadwal.css">
+    <link rel="icon" href="../img/logo.png">
+    <title>Jadwal Pertemuan</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+    </nav>
+
+    <div class="menu-user">
+        <div class="title-data">
+            <img src="../img/logo.png" alt="">
+            <p>Ridwan Wiranata</p>
+        </div>
+        <ul>
+            <li>
+                <span>Logout</span>
+            </li>
+            <li>
+                <span>Profile</span>
+            </li>
+            <li>
+                <span>Data data</span>
+                <span> > </span>
+            </li>
+            <ul>
+                <li>Dokter</li>
+                <li>Pasien</li>
+                <li>Jadwal Pertemuan</li>
+                <li>Poliklinik</li>
+                <li>Pendaftaran</li>
+                <li>Rekam Medis</li>
+                <li>Obat</li>
+            </ul>
+        </ul>
+    </div>
+    <button id="create">Tambah Jadwal</button>
+    <table>
+        <thead>
+            <th>No</th>
+            <th>Nama Dokter</th>
+            <th>Poliklinik</th>
+            <th>Hari</th>
+            <th>Jam buka</th>
+            <th>Jam tutup</th>
+            <th>Aksi</th>
+        </thead>
+        <tbody>
+            <tr data-id="1">
+                <td>1</td>
+                <td>Damson</td>
+                <td>Ruang saraf</td>
+                <td>senin</td>
+                <td>05.00</td>
+                <td>12.00</td>
+                <td>
+                    <button onclick="OpenEditSchedule(1)"><i class="fa-solid fa-user-pen"></i>
+                        </button>
+                    <button>
+                        <i class="fa-solid fa-user-xmark"></i>
+                        </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- modal tambah jadwal -->
+    <div class="modal-create-schedule">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Pilih Dokter</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Damson</option>
+                            <option value="">Dede</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pilih Poliklinik</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Saraf</option>
+                            <option value="">Anak</option>
+                            <option value="">Kandungan</option>
+                            <option value="">Bedah</option>
+                            <option value="">Jantung</option>
+                            <option value="">Kelamin</option>
+                            <option value="">Mata</option>
+                            <option value="">Penyakit Dalam</option>
+                            <option value="">Kebidaanan</option>
+                            <option value="">Apoteker</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pilih hari</td>
+                    <td>:</td>
+                    <td><select name="" id="">
+                            <option value="">Senin</option>
+                            <option value="">Selasa</option>
+                            <option value="">Rabu</option>
+                            <option value="">Kamis</option>
+                            <option value="">Jumat</option>
+                            <option value="">Sabtu</option>
+                            <option value="">Ahad</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Jam buka</td>
+                    <td>:</td>
+                    <td><input type="time" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Jam tutup</td>
+                    <td>:</td>
+                    <td><input type="time" name="" id=""></td>
+                </tr>
+            </table>
+            <div class="action-create">
+                <button>Tambah</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-edit-schedule">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Pilih Dokter</td>
+                    <td>:</td>
+                    <td>Damson</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Damson</option>
+                            <option value="">Dede</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pilih Poliklinik</td>
+                    <td>:</td>
+                    <td>Saraf</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Saraf</option>
+                            <option value="">Anak</option>
+                            <option value="">Kandungan</option>
+                            <option value="">Bedah</option>
+                            <option value="">Jantung</option>
+                            <option value="">Kelamin</option>
+                            <option value="">Mata</option>
+                            <option value="">Penyakit Dalam</option>
+                            <option value="">Kebidaanan</option>
+                            <option value="">Apoteker</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pilih hari</td>
+                    <td>:</td>
+                    <td>Senin</td>
+                    <td><select name="" id="">
+                            <option value="">Senin</option>
+                            <option value="">Selasa</option>
+                            <option value="">Rabu</option>
+                            <option value="">Kamis</option>
+                            <option value="">Jumat</option>
+                            <option value="">Sabtu</option>
+                            <option value="">Ahad</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Jam buka</td>
+                    <td>:</td>
+                    <td>12:23</td>
+                    <td><input type="time" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Jam tutup</td>
+                    <td>:</td>
+                    <td>12:23</td>
+                    <td><input type="time" name="" id=""></td>
+                </tr>
+            </table>
+            <div class="action-edit">
+                <button>Ubah</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/jadwal.js"></script>
+</body>
+
+</html>

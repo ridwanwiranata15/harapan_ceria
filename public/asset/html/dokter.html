@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/dokter.css">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+    </nav>
+    <div class="menu-user">
+        <div class="title-data">
+            <img src="../img/logo.png" alt="">
+            <p>Ridwan Wiranata</p>
+        </div>
+        <ul>
+            <li>
+                <span>Logout</span>
+            </li>
+            <li>
+                <span>Profile</span>
+            </li>
+            <li>
+                <span>Data data</span>
+                <span> > </span>
+            </li>
+            <ul>
+                <li>Dokter</li>
+                <li>Pasien</li>
+                <li>Jadwal Pertemuan</li>
+                <li>Poliklinik</li>
+                <li>Pendaftaran</li>
+                <li>Rekam Medis</li>
+                <li>Obat</li>
+            </ul>
+        </ul>
+    </div>
+    <button id="create">Tambah Dokter</button>
+    <div class="modal-create">
+        <div class="modal-create-content">
+            <ul>
+                <li>
+                    <label for="">Nama Dokter</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="">Spesialis</label>
+                    <select name="" id="">
+                        <option value="">Umum</option>
+                        <option value="">Anak</option>
+                        <option value="">Bedah</option>
+                        <option value="">Kandungan</option>
+                        <option value="">Penyakit Dalam</option>
+                        <option value="">Mata</option>
+                        <option value="">Kelamin</option>
+                        <option value="">Jantung</option>
+                        <option value="">Saraf</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="">Alamat</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="">Tanggal lahir</label>
+                    <input type="date">
+                </li>
+                <li>
+                    <label for="">Jenis Kelamin</label>
+                    <label><input type="radio" name="" id="" value="laki-laki">Laki laki</label>
+                    <label><input type="radio" name="" id="" value="perempuan">Perempuan</label>
+                </li>
+                <li>
+                    <label for="">Nomor Telepon</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="">Nomor SIP</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="">Email</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="">Foto</label>
+                    <input type="file">
+                </li>
+            </ul>
+            <button id="tambah">Tambah</button>
+            <button id="batal">Batal</button>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Spesialis</th>
+                <th>Alamat</th>
+                <th>Tanggal lahir</th>
+                <th>Jenis Kelamin</th>
+                <th>Nomor Telepon</th>
+                <th>Nomor SIP</th>
+                <th>Email</th>
+                <th>Foto</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-id="1">
+                <td>1</td>
+                <td>Prof. Dr Handoko</td>
+                <td>Penyakit dalam</td>
+                <td>Jakarta</td>
+                <td>12 desember 2023</td>
+                <td>Laki -laki</td>
+                <td>012588800</td>
+                <td>10023320300</td>
+                <td>dede@gmail.com</td>
+                <td><img src="../img/jpeg-optimizer_RIDWAN WIRANATA.jpeg" alt=""></td>
+                <td>
+                    <button onclick="OpenDetail(1)">
+                        <i class="fa-solid fa-circle-info fa-lg"></i>
+
+                    </button>
+                    <button onclick="OpenEdit(1)">
+                        <i class="fa-solid fa-user-pen"></i>
+
+                    </button>
+                    <button onclick="DeleteDoctor(1)">
+                        <i class="fa-solid fa-user-xmark"></i>
+
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="modal-detail">
+        <div class="modal-detail-main">
+            <div class="content">
+                <img src="../img/jpeg-optimizer_RIDWAN WIRANATA.jpeg" alt="">
+                <div class="data">
+                    <table>
+                        <tr>
+                            <td>Nama Dokter</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                        <tr>
+                            <td>Spesialis</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal lahir</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                        <tr>
+                            <td>Nomor Telepon</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                        <tr>
+                            <td>Nomor SIP</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>Nama Dokter</td>
+                        </tr>
+                    </table>
+                    <button>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="show-edit">
+        <div class="show-edit-content">
+            <form method="post">
+                <div class="image-upload">
+                    <ul>
+                        <li>
+                            <img src="../img/jpeg-optimizer_RIDWAN WIRANATA.jpeg" alt="">
+                        </li>
+                        <li>
+                            <input type="file" name="" id="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="table-doctor">
+                    <table>
+                        <tr>
+                            <td>Nama Dokter</td>
+                            <td>:</td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Spesialis</td>
+                            <td>:</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">Saraf</option>
+                                    <option value="">Anak</option>
+                                    <option value="">Kandungan</option>
+                                    <option value="">Bedah</option>
+                                    <option value="">Jantung</option>
+                                    <option value="">Kelamin</option>
+                                    <option value="">Mata</option>
+                                    <option value="">Penyakit Dalam</option>
+                                    <option value="">Kebidaanan</option>
+                                    <option value="">Apoteker</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td>:</td>
+                            <td><input type="tel" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal lahir</td>
+                            <td>:</td>
+                            <td><input type="date" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>
+                                <label><input type="radio" name="" id="" value="laki-laki">Laki laki</label>
+                                <label><input type="radio" name="" id="" value="perempuan">Perempuan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nomor Telepon</td>
+                            <td>:</td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Nomor SIP</td>
+                            <td>:</td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td><input type="email" name="" id=""></td>
+                        </tr>
+                    </table>
+                    <div class="button-action">
+                        <button>Update</button>
+                        <button>Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/dokter.js"></script>
+</body>
+
+</html>

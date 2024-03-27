@@ -1,0 +1,110 @@
+
+table{
+    width: 100%;
+}
+table thead tr th {
+
+    padding-right: 130px;
+}
+
+table tbody tr td {
+    border-bottom: 1px solid black;
+}
+table tbody tr td:last-child button {
+   padding: 10px;
+   border: none;
+}
+table tbody tr td:last-child button:first-child {
+    background-color: #ffdd59;
+ }
+ table tbody tr td:last-child button:last-child {
+    background-color: #ff3f34;
+    color: white;
+ }
+ #create{
+    padding: 10px;
+    border: none;
+    background-color: lightgreen;
+    margin-bottom: 10px;
+ }
+ .modal-create-schedule{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+ }
+ .modal-create-schedule .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+
+    display: block;
+    animation: blink 1.9s ease forwards;
+ }
+ .modal-create-schedule .content select, input[type="time"] {
+    width: 100%;
+ }
+ @keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+ 
+   
+}
+.modal-create-schedule .content .action-create button{
+   padding: 10px;
+   border: none;
+   margin-top: 10px;
+   cursor: pointer;
+}
+ .modal-create-schedule .content .action-create button:first-child{
+    background-color: lightgreen;
+ }
+ .modal-create-schedule .content .action-create button:last-child{
+    background-color: #ff3f34;
+    color: white;
+ }
+ .modal-edit-schedule{
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0,0.5);
+   display: none;
+}
+.modal-edit-schedule .content{
+   background-color: white;
+   margin: 10px auto;
+   padding: 10px;
+   width: 350px;
+
+   display: block;
+   animation: blink 1.9s ease forwards;
+}
+.modal-edit-schedule .content select, input[type="time"] {
+   width: 100%;
+}
+.modal-edit-schedule .content .action-edit button{
+   padding: 10px;
+   border: none;
+}
+.modal-edit-schedule .content .action-edit button:first-child{
+   background-color: #ffdd59;
+}
+.modal-edit-schedule .content .action-edit button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}

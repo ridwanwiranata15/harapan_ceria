@@ -1,0 +1,308 @@
+.doctor table tr th {
+
+    padding-right: 100px;
+}
+
+.doctor table tbody tr td {
+    border-bottom: 1px solid black;
+}
+.doctor table thead tr th:nth-child(4) {
+    display: none;
+}
+
+.doctor table tbody tr td:nth-child(4) {
+    display: none;
+}
+.doctor table thead tr th:nth-child(5) {
+    display: none;
+}
+
+.doctor table tbody tr td:nth-child(5) {
+    display: none;
+}
+.doctor table thead tr th:nth-child(6) {
+    display: none;
+}
+
+.doctor table tbody tr td:nth-child(6) {
+    display: none;
+}
+.doctor table thead tr th:nth-child(7) {
+    display: none;
+}
+
+.doctor table tbody tr td:nth-child(7) {
+    display: none;
+}
+
+.doctor table thead tr th:nth-child(8) {
+    display: none;
+}
+
+.doctor table tbody tr td:nth-child(8) {
+    display: none;
+}
+
+.doctor table thead tr th:nth-child(9) {
+    display: none;
+}
+
+.doctor table tbody tr td:nth-child(9) {
+    display: none;
+}
+
+.doctor table thead tr th:nth-child(10) {
+    display: none;
+}
+
+.doctor table tbody tr td:nth-child(10) {
+    display: none;
+}
+.doctor table tr td:last-child{
+    display: flex;
+}
+.doctor table tr td:last-child button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.doctor table tr td:last-child button:first-child {
+    background-color: #4bcffa;
+    color: white;
+}
+
+.doctor table tr td:last-child button:nth-child(2) {
+    background-color: #ffdd59;
+
+}
+
+.doctor table tr td:last-child button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}
+.doctor table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.doctor table thead tr th{
+    padding-right: 175px;
+    background-color: #f2f2f2;
+}
+.doctor table tbody tr td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.doctor table thead tr th:first-child{
+    min-width: 50px;
+}
+.doctor table tbody tr td:first-child{
+   min-width: 50px;
+}
+.doctor table thead tr th:nth-child(2){
+    min-width: 150px;
+}
+.doctor table tbody tr td:nth-child(2){
+   min-width: 150px;
+}
+.modal-detail {
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: blink 0.5s ease forwards;
+   display: none;
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal-detail .modal-detail-main {
+    background-color: white;
+    width: 805px;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+
+}
+
+.modal-detail .modal-detail-main .content img {
+    max-width: 100%;
+    height: 300px;
+}
+
+.modal-detail .modal-detail-main .content {
+    display: flex;
+
+}
+
+.modal-detail .modal-detail-main .content .data table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin-left: 10px;
+}
+
+.modal-detail .modal-detail-main .content .data table td {
+    vertical-align: top;
+}
+
+.modal-detail .modal-detail-main .content .data button {
+    margin-left: 500px;
+    margin-top: 50px;
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="date"] {
+    width: 171px;
+}
+
+select {
+    width: 177px;
+}
+
+.show-edit {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.show-edit .show-edit-content form {
+    display: flex;
+    background-color: white;
+    width: 790px;
+    margin-left: 400px;
+    margin-top: 10px;
+    animation: blink 0.7s ease forwards;
+
+}
+
+.show-edit .show-edit-content table {
+    margin-top: 15px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.table-doctor .button-action {
+    margin-left: 350px;
+    margin-top: 70px;
+}
+
+.table-doctor .button-action button {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.table-doctor .button-action button:nth-child(1) {
+    background-color: #ffdd59;
+}
+
+.table-doctor .button-action button:nth-child(2) {
+    background-color: #ff3f34;
+    color: white;
+}
+
+.image-upload img {
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+}
+
+body #create {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.modal-create {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+
+}
+
+.modal-create .modal-create-content {
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 420px;
+    display: block;
+    border-radius: 10px;
+}
+
+.modal-create .modal-create-content table {
+    width: 500px;
+}
+
+.modal-create .modal-create-content input[type="text"] {
+    width: 365px;
+    padding: 5px;
+}
+
+.modal-create .modal-create-content input[type="date"] {
+    width: 365px;
+    padding: 5px;
+}
+
+.modal-create .modal-create-content input[type="email"] {
+    width: 365px;
+    padding: 5px;
+}
+
+.modal-create .modal-create-content select {
+    width: 379px;
+    padding: 5px;
+}
+.modal-create .modal-create-content #tambah{
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+.modal-create .modal-create-content #batal{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}

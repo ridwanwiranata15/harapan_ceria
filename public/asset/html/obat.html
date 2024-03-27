@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/obat.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="icon" href="../img/logo.png" >
+    <title>Jadwal Pertemuan dokter dan pasien</title>
+</head>
+<body>
+    <nav>
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+    </nav>
+    <div class="menu-user">
+        <div class="title-data">
+            <img src="../img/logo.png" alt="">
+            <p>Ridwan Wiranata</p>
+        </div>
+        <ul>
+            <li>
+                <span>Logout</span>
+            </li>
+            <li>
+                <span>Profile</span>
+            </li>
+            <li>
+                <span>Data data</span>
+                <span> > </span>
+            </li>
+            <ul>
+                <li>Dokter</li>
+                <li>Pasien</li>
+                <li>Jadwal Pertemuan</li>
+                <li>Poliklinik</li>
+                <li>Pendaftaran</li>
+                <li>Rekam Medis</li>
+                <li>Obat</li>
+                <li>Rawat Inap</li>
+            </ul>
+        </ul>
+    </div>
+    <button id="create">Tambah</button>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Obat</th>
+                    <th>Dosis</th>
+                    <th>Aturan Pakai</th>
+                    <th>Kategori</th>
+                    <th>Stok</th>
+                    <th>Harga</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="1">
+                    <td>1</td>
+                    <td>Biogesic</td>
+                    <td>2 kali sehari</td>
+                    <td>Dikocok</td>
+                    <td>Anak</td>
+                    <td>100</td>
+                    <td>500.000</td>
+                    <td>
+                        <button onclick="Edit(1)">
+                            <i class="fa-solid fa-user-pen"></i>
+                        
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-user-xmark"></i>
+                        </button>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-create-obat">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Nama Obat</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dosis</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aturan pakai</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kategori</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stok</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harga</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+            </table>
+            <div class="action-create">
+                <button>Tambah</button>
+                <button>Batal</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-edit-obat">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Nama Obat</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dosis</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aturan pakai</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kategori</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stok</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harga</td>
+                    <td>:</td>
+                    <td>
+                       <input type="text" name="" id="">
+                    </td>
+                </tr>
+            </table>
+            <div class="action-edit">
+                <button>Ubah</button>
+                <button>Batal</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+    <script src="../js/obat.js"></script>
+    <script src="../js/all.min.js"></script>
+</body>
+</html>

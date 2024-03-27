@@ -1,0 +1,97 @@
+table tr th{
+    padding-right: 110px;
+}
+#create{
+    background-color:lightgreen;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+}
+.modal-create-obat{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-create-obat .content{
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 350px;
+    display: block;
+}
+.modal-create-obat .content input[type="date"], select{
+    width: 100%;
+}
+.modal-create-obat .content .action-create button{
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+.modal-create-obat .content .action-create button:first-child{
+    background-color:lawngreen;
+}
+.modal-create-obat .content .action-create button:last-child{
+   background-color: #ff3f34;
+   color: white;
+}
+.content table tbody tr td:last-child button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.content table tbody tr td:last-child button:first-child{
+    background-color: #ffdd59;
+}
+.content table tbody tr td:last-child button:last-child{
+    background-color: #ff3f34;
+    color: white;
+}
+.modal-edit-obat {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-edit-obat .content {
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 390px;
+    display: block;
+
+}
+
+.modal-edit-obat .content input[type='date'] {
+    width: 100%;
+
+}
+
+.modal-edit-obat .content .action-edit {
+    margin-top: 10px;
+}
+
+.modal-edit-obat .content .action-edit button {
+    padding: 10px;
+    border: none;
+}
+
+.modal-edit-obat .content .action-edit button:first-child {
+    background-color: #ffdd59;
+}
+
+.modal-edit-obat .content .action-edit button:last-child {
+    background-color: #ff3f34;
+    color: white;
+}

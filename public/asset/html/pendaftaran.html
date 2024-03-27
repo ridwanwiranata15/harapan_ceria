@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" href="../img/logo.png" >
+    <link rel="stylesheet" href="../css/pendaftaran.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <title>Pendaftaran</title>
+</head>
+<body>
+    <nav>
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+        <img src="../img/logo.png" alt="" width="210px" height="170px">
+    </nav>
+    <div class="menu-user">
+        <div class="title-data">
+            <img src="../img/logo.png" alt="">
+            <p>Ridwan Wiranata</p>
+        </div>
+        <ul>
+            <li>
+                <span>Logout</span>
+            </li>
+            <li>
+                <span>Profile</span>
+            </li>
+            <li>
+                <span>Data data</span>
+                <span> > </span>
+            </li>
+            <ul>
+                <li>Dokter</li>
+                <li>Pasien</li>
+                <li>Jadwal Pertemuan</li>
+                <li>Poliklinik</li>
+                <li>Pendaftaran</li>
+                <li>Rekam Medis</li>
+                <li>Obat</li>
+            </ul>
+        </ul>
+    </div>
+    <button id="create">Tambah</button>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Pasien</th>
+                    <th>Nama Dokter</th>
+                    <th>Poli klinik</th>
+                    <th>Tanggal pendaftaran</th>
+                    <th>Jam pendaftaran</th>
+                    <th>Keluhan</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="1">
+                    <td>1</td>
+                    <td>M dava al Ghifari</td>
+                    <td>Damson</td>
+                    <td>Saraf</td>
+                    <td>12-12-2025</td>
+                    <td>12.00</td>
+                    <td>Deman berdarah</td>
+                    <td>Sukses</td>
+                    <td>
+                        <button onclick="Edit(1)"><i class="fa-solid fa-user-pen"></i></button>
+                        <button><i class="fa-solid fa-user-xmark"></i></button>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-create-daftar">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Nama Pasien</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">M dava al Ghifari</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nama Dokter</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Damson</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Poliklinik</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Saraf</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal pendaftaran</td>
+                    <td>:</td>
+                    <td>
+                        <input type="date" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jam pendaftaran</td>
+                    <td>:</td>
+                    <td>
+                        <input type="time" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Keluhan</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" name="" id="">
+                    </td>
+                </tr>
+            </table>
+            <div class="action-create">
+                <button>Tambah</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-edit-daftar">
+        <div class="content">
+            <table>
+                <tr>
+                    <td>Nama Pasien</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">M dava al Ghifari</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nama Dokter</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Damson</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Poliklinik</td>
+                    <td>:</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Saraf</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal pendaftaran</td>
+                    <td>:</td>
+                    <td>
+                        <input type="date" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jam pendaftaran</td>
+                    <td>:</td>
+                    <td>
+                        <input type="time" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Keluhan</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" name="" id="">
+                    </td>
+                </tr>
+            </table>
+            <div class="action-edit">
+                <button>Ubah</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+    </div>
+<script src="../js/index.js"></script>
+<script src="../js/pendaftaran.js"></script>
+<script src="../js/all.min.js"></script>
+</body>
+</html>
