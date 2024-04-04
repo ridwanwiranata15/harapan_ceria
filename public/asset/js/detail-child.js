@@ -52,7 +52,7 @@ function OpenEditHistory(id) {
     document.querySelector('.modal-edit-history').querySelector('.content').querySelector('table').children[0].children[3].children[2].children[0].value = document.querySelector('.history').querySelector('table').querySelector('tbody').querySelector('tr[data-id="' + id + '"]').children[4].textContent;;
     document.querySelector('.modal-edit-history').querySelector('.action-edit').children[0].addEventListener('click', () => {
         document.querySelector('.modal-edit-history').querySelector('.content').querySelector('form').submit();
-        document.querySelector('.modal-edit-history').querySelector('.content').querySelector('form').action = 'edit/' + id
+        document.querySelector('.modal-edit-history').querySelector('.content').querySelector('form').action = '/edit-history/' + id
     })
 }
 document.querySelector('.nutrition').querySelector('.button').querySelector('button').addEventListener('click', () => {
@@ -118,4 +118,8 @@ function OpenModalEditTumbuh(id) {
             umurInput.value = 10;
         }
     }
+}
+function DeleteParentChild(id)
+{
+    alert(id);
 }

@@ -4,7 +4,7 @@ document.getElementById('create').addEventListener('click', ()=>{
 document.querySelector('.modal-create-obat').querySelector('.content').querySelector('.action-create').children[1].addEventListener('click', ()=>{
     document.querySelector('.modal-create-obat').style.display = "none";
 })
-function Edit(id)
+function EditObat(id)
 {
     document.querySelector('.modal-edit-obat').style.display = "block";
     document.querySelector('.modal-edit-obat').querySelector('.content').querySelector('.action-edit').children[1].addEventListener('click', ()=>{
@@ -23,5 +23,14 @@ function Edit(id)
     document.querySelector('.modal-edit-obat').querySelector('.content').querySelector('table').children[0].children[4].children[2].children[0].value = Stok;
     document.querySelector('.modal-edit-obat').querySelector('.content').querySelector('table').children[0].children[5].children[2].children[0].value = Harga;
 
-    console.log('data obat', {Nama, Dosis, Aturan, Kategori, Stok, Harga});
+    document.querySelector('.modal-edit-obat').querySelector('.content').querySelector('.action-edit').children[0].addEventListener("click", ()=>{
+        const FormEditObat = document.querySelector('.modal-edit-obat').querySelector('.content').querySelector('form');
+        FormEditObat.submit();
+        FormEditObat.action = '/edit-obat/' + id
+    })
+}
+function SubmitCreate(){
+    const FormSubmitCreate = document.getElementById('addCreate')
+    FormSubmitCreate.submit();
+    FormSubmitCreate.action = '/create-obat';
 }

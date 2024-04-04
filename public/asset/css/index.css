@@ -19,7 +19,7 @@ nav img:last-child{
 }
 .menu-user .title-data img{
     width: 100px;
-    
+
 }
 .menu-user .title-data {
     display: flex;
@@ -75,4 +75,7 @@ table thead tr th{
 }
 table tbody tr td {
     border-bottom: 1px solid black;
+}
+table tbody tr td:last-child {
+    display: flex;
 }

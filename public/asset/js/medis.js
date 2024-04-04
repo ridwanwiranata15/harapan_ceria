@@ -5,7 +5,7 @@ document.querySelector('.modal-create-medis').querySelector('.content').querySel
     document.querySelector('.modal-create-medis').style.display = "none";
 })
 
-function Edit(id)
+function EditMedis(id)
 {
     document.querySelector('.modal-edit-medis').style.display = 'block';
     document.querySelector('.modal-edit-medis').querySelector('.content').querySelector('.action-edit').children[1].addEventListener('click', ()=>{
@@ -24,4 +24,23 @@ function Edit(id)
     document.querySelector('.modal-edit-medis').querySelector('.content').querySelector('table').children[0].children[4].children[2].children[0].value = Diagnosis;
     document.querySelector('.modal-edit-medis').querySelector('.content').querySelector('table').children[0].children[5].children[2].children[0].value = Tindakan;
     document.querySelector('.modal-edit-medis').querySelector('.content').querySelector('table').children[0].children[6].children[2].children[0].value = ResepObat;
+    document.querySelector('.modal-edit-medis').querySelector('.content').querySelector('.action-edit').children[0].addEventListener('click', ()=>{
+       const FormEdit =  document.querySelector('.modal-edit-medis').querySelector('.content').querySelector('form');
+       FormEdit.submit();
+       FormEdit.action = '/edit-medis/' + id;
+    })
+
+    function EditChange()
+    {
+        const FormEdit =  document.querySelector('.modal-edit-medis').querySelector('.content').querySelector('form');
+        FormEdit.submit();
+        FormEdit.action = '/edit-medis/' + id;
+    }
+}
+
+const CreateMedis = document.getElementById('CreateMedis');
+function Create()
+{
+    CreateMedis.submit();
+    CreateMedis.action = '/create-medis';
 }

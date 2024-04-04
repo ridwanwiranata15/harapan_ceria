@@ -24,4 +24,23 @@ class Pasien extends Model
         'nama_asuransi',
         'nomor_assuransi',
     ];
+
+    /**
+     * Get the jadwal associated with the Pasien
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function jadwal()
+    {
+        return $this->hasOne(Jadwal::class, 'id_pasien', 'id');
+    }
+    /**
+     * Get the ruang associated with the Pasien
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function ruang()
+    {
+        return $this->hasOne(Rawat_inap::class, 'pasien_id', 'id');
+    }
 }

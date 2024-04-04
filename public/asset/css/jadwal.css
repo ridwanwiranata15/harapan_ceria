@@ -4,7 +4,7 @@ table{
 }
 table thead tr th {
 
-    padding-right: 130px;
+    padding-right: 100px;
 }
 
 table tbody tr td {
@@ -58,8 +58,8 @@ table tbody tr td:last-child button:first-child {
     100% {
         opacity: 1;
     }
- 
-   
+
+
 }
 .modal-create-schedule .content .action-create button{
    padding: 10px;

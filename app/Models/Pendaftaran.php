@@ -20,7 +20,7 @@ class Pendaftaran extends Model
      */
     public function pasien()
     {
-        return $this->belongsTo(Pasien::class, 'id');
+        return $this->belongsTo(Pasien::class);
     }
     /**
      * Get the dokter that owns the Pendaftaran
@@ -29,7 +29,7 @@ class Pendaftaran extends Model
      */
     public function dokter()
     {
-        return $this->belongsTo(Dokter::class, 'id');
+        return $this->belongsTo(Dokter::class);
     }
     /**
      * Get the poliklinik that owns the Pendaftaran
@@ -38,6 +38,16 @@ class Pendaftaran extends Model
      */
     public function poliklinik()
     {
-        return $this->belongsTo(Poliklinik::class, 'id');
+        return $this->belongsTo(Poliklinik::class,);
+    }
+
+    /**
+     * Get the rekam_medis associated with the Pendaftaran
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function rekam_medis()
+    {
+        return $this->hasOne(Rekam_medis::class, 'id_pendaftaran', 'id');
     }
 }

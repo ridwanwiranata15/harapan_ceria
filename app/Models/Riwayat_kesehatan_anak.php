@@ -8,8 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Riwayat_kesehatan_anak extends Model
 {
     use HasFactory;
-    protected $table = ' riwayat_kesehatan_anak';
-    protected $fillable = ['pasien_id', 'panyakit', 'tanggal_diagnosis', 'pengobatan', 'catatan'];
+    protected $table = 'riwayat_kesehatan_anak';
+    protected $fillable =
+    [
+    'id',
+    'id_pasien',
+    'penyakit',
+    'tanggal_diagnosis',
+    'pengobatan',
+    'catatan'];
 
     /**
      * Get thepasien that owns the Riwayat_kesehatan_anak

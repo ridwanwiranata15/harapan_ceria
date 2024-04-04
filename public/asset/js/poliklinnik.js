@@ -5,16 +5,22 @@ document.querySelector('.modal-create-poli').querySelector('.content').querySele
     document.querySelector('.modal-create-poli').style.display = "none";
 });
 
-function Edit(id)
+function EditPoli(id)
 {
     document.querySelector('.modal-edit-poli').style.display = "block";
     document.querySelector('.modal-edit-poli').querySelector('.content').querySelector('table').children[0].children[0].children[2].children[0].value = document.querySelector('.content').querySelector('table').children[1].querySelector('tr[data-id="'+id+'"]').children[1].textContent;
     document.querySelector('.modal-edit-poli').querySelector('.content').querySelector('table').children[0].children[1].children[2].children[0].value = document.querySelector('.content').querySelector('table').children[1].querySelector('tr[data-id="'+id+'"]').children[2].textContent;
     document.querySelector('.modal-edit-poli').querySelector('.content').querySelector('table').children[0].children[2].children[2].children[0].value = document.querySelector('.content').querySelector('table').children[1].querySelector('tr[data-id="'+id+'"]').children[3].textContent;
+    document.querySelector('.modal-edit-poli').querySelector('.content').querySelector('.action-edit').children[0].addEventListener('click', ()=>{
+        document.querySelector('.modal-edit-poli').querySelector('.content').querySelector('form').submit();
+        document.querySelector('.modal-edit-poli').querySelector('.content').querySelector('form').action = '/edit-poli/' + id;
+
+
+    });
 
 }
 document.querySelector('.modal-edit-poli').querySelector('.content').querySelector('.action-edit').children[1].addEventListener('click', ()=>{
-    document.querySelector('.modal-edit-poli').style.display = "none";   
-   
+    document.querySelector('.modal-edit-poli').style.display = "none";
+
 
 });

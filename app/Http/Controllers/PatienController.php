@@ -55,23 +55,6 @@ class PatienController extends Controller
         ]);
         return redirect()->back();
     }
-    public function detail_child($id)
-    {
-        $child = Pasien::find($id);
 
-        $parents = Orang_tua::where('pasien_id', $child->id)->get();
-        return view('detail-child', ['child' => $child], ['parent' => $parents]);
-    }
-    public function create_parent(Request $request, $id)
-    {
-        Orang_tua::create([
-            'pasien_id' => Pasien::find($id)->id,
-            'nama' => $request->nama,
-            'alamat' => $request->alamat,
-            'tanggal_lahir' => $request->tanggal,
-            'nomor_telepon' => $request->telepon,
-            'hubungan_dengan_pasien' => $request->hubungan
-        ]);
-        return redirect()->back();
-    }
+    
 }

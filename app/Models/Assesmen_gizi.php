@@ -9,7 +9,7 @@ class Assesmen_gizi extends Model
 {
     use HasFactory;
 
-    protected $table = 'assesmen_gizi';
+    protected $table = 'assesmen';
 
     protected $fillable = [
         'id_pasien',

@@ -15,6 +15,7 @@ class Rawat_inap extends Model
         'dokter_id',
         'tanggal_masuk',
         'tanggal_keluar',
+        'ruangan',
         'kelas',
         'diagnosis',
         'tindakan'
@@ -27,7 +28,7 @@ class Rawat_inap extends Model
      */
     public function pasien()
     {
-        return $this->belongsTo(Pasien::class, 'id');
+        return $this->belongsTo(Pasien::class, 'dokter_id','id');
     }
     /**
      * Get the dokter that owns the Rawat_inap
@@ -36,6 +37,6 @@ class Rawat_inap extends Model
      */
     public function dokter()
     {
-        return $this->belongsTo(Dokter::class, 'id');
+        return $this->belongsTo(Dokter::class,'pasien_id', 'id');
     }
 }

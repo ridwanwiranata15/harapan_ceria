@@ -11,7 +11,7 @@ class Pertumbuhan_dan_perkembangan extends Model
     use HasFactory;
 
     protected $table = 'pertumbuhan_dan_perkembangan';
-    protected $fillable = ['pasien_id', 'usia', 'berat_badan', 'tinggi_badan', 'lingkar_kepala', 'tahap_perkembangan'];
+    protected $fillable = ['id_pasien', 'usia', 'berat_badan', 'tinggi_badan', 'lingkar_kepala', 'tahap_perkembangan'];
 
     /**
      * Get the user that owns the Pertumbuhan_dan_perkembangan

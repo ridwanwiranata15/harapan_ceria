@@ -12,4 +12,6 @@ class Poliklinik extends Model
     protected $table = 'poliklinik';
 
     protected $fillable = ['nama', 'lantai', 'ruangan', 'jam_buka', 'jam_tutup'];
+
+   
 }

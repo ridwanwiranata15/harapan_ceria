@@ -1,18 +1,15 @@
 <nav>
     <img src="../asset/img/logo.png" alt="" width="210px" height="170px">
-    <img src="../asset/img/logo.png" alt="" width="210px" height="170px">
+    <img src="{{ url('storage/'. auth()->user()->image_profile) }}" alt="" width="100px" height="100px">
 </nav>
 <div class="menu-user">
     <div class="title-data">
-        <img src="../asset/img/logo.png" alt="">
-        <p>Ridwan Wiranata</p>
+        <img src="{{ url('storage/'. auth()->user()->image_profile) }}" alt="">
+        <p>{{ auth()->user()->name }}</p>
     </div>
     <ul>
-        <li>
+        <li id="logout">
             <span>Logout</span>
-        </li>
-        <li>
-            <span>Profile</span>
         </li>
         <li>
             <span>Data data</span>
